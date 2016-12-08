@@ -2,14 +2,30 @@
 # Copyright © 2016 The developers of libertine linux's package fortify_headers. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/libertine-linux-packages/fortify_headers/master/COPYRIGHT.
 
 
-variant=upstream
-
-libertine_compile_build_fortify_headers()
-{
-	:
-}
-
-libertine_compile_fortify_headers()
-{
-	:
-}
+case "$package" in
+	
+	build_fortify_headers)
+		
+		variant=empty
+		
+		copy_subset="$variant"
+		
+		libertine_compile_build_fortify_headers()
+		{
+			:
+		}
+	
+	;;
+	
+	fortify_headers)
+		
+		variant=upstream
+		
+		libertine_compile_fortify_headers()
+		{
+			core_exitError 1 "Not implemented"
+		}
+		
+	;;
+	
+esac
