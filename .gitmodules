@@ -1,3 +1,8 @@
+Updating origin
+https://github.com/libertine-linux-mirrors/fortify-headers
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 [submodule "upstream"]
 	path = upstream
-	url = git://git.2f30.org/fortify-headers.git
+	url = https://github.com/libertine-linux-mirrors/fortify-headers.git
+	branch = master
+	libertine-linux-upstream = git://git.2f30.org/fortify-headers.git
